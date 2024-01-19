@@ -29,4 +29,10 @@ public class NumberController {
         modelVars.addAttribute("num6", service.between(1, 29));
         return "powerball.html";
     }
+
+    @RequestMapping("largeNumGenerator")
+    public String genLargeNumber(Model modelVars) {
+        modelVars.addAttribute("nums", service.betweenLarge(20, 1, 21));
+        return "largeNumGenerator.html";
+    }
 }
