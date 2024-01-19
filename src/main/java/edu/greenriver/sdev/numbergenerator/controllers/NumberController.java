@@ -18,4 +18,15 @@ public class NumberController {
         modelVars.addAttribute("num", service.between(1, 20));
         return "randnum.html" ;
     }
+
+    @RequestMapping("powerball")
+    public String genPowerball(Model modelVars) {
+        modelVars.addAttribute("num1", service.between(1, 69));
+        modelVars.addAttribute("num2", service.between(1, 69));
+        modelVars.addAttribute("num3", service.between(1, 69));
+        modelVars.addAttribute("num4", service.between(1, 69));
+        modelVars.addAttribute("num5", service.between(1, 69));
+        modelVars.addAttribute("num6", service.between(1, 29));
+        return "powerball.html";
+    }
 }
