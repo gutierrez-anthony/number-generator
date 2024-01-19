@@ -16,6 +16,6 @@ public class NumberController {
     @RequestMapping("randnum")
     public String genNumber(Model modelVars){
         modelVars.addAttribute("num", service.between(1, 20));
-        return "num";
+        return "randnum.html" ;
     }
 }
